@@ -1,0 +1,343 @@
+
+body {
+    background: rgb(140,203,170);
+    background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
+    margin: 0;
+    font-family: 'sans-serif', serif;
+    --big-font-size:2.5rem;
+    --normal-font-size: .938rem;
+    color: #fff;
+}
+h1 {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 4em;
+    margin: 2em 1rem;
+}
+
+@media only screen and (min-width: 35em){
+    h1 {
+        font-size: 8em;
+        margin: 2em 4rem 1em;
+    }
+}
+:root{
+ --header-height: 3rem;
+ --first-color:#FCA4A6;
+ --first-color-dark:#c1576A;
+ --first-color-darken:#a83e51;
+ --white-color:#fcf8f8;   
+}
+h2 {
+    border-bottom: 1px solid #cc1;
+    font-family: 'Oxygen', Sans-Serif;
+    font-size: 4em;
+    color: #fff;
+}
+
+p {
+    line-height: 1.6em;
+    color: #eee;
+}
+main {
+    margin: 10vh 1em 10vh;
+}
+
+.main-hero {
+    min-height: 40vh;
+    padding-top: 4em;
+}
+.home{
+    background-color: var(--first-color);
+    overflow: hidden;
+}
+.home_container{
+    height: calc(100vh-var(--header-height));
+    grid-templete-rows: repeat(2, max-content);
+    row-gap: 1.5rem;
+}
+.home_img{
+    position: relative;
+    padding-top: 1.5rem;
+    justify-self:center;
+    width: 302px;
+    height: 233px;
+}
+.show{
+    right:0;
+}
+section {
+    position: relative;
+    min-height: 80vh;
+}
+h1,p,ul{
+    margin:0;
+}
+ul{
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.bd-grid{
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 100%;
+    column-gap: 2rem;
+    width: calc(100% - 2rem);
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+}
+
+/* ---- Module Rules ---- */
+.home_data{
+    color: var(--white-color);
+}
+.home_title{
+    font-size: var(--big-font-size);
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+.home_description{
+    margin-bottom: 2.5rem;
+}
+.home_button{
+    display: inline-block;
+    background-color: var(--first-color-dark);
+    color: var (--white-color);
+    padding: 1.125rem 2rem;
+    border-radius: .5rem;
+}
+.home_button: hover{
+    background-color: var(--first-color-darken);
+}
+/* Navigation Styles*/
+.nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: centre;
+}
+@media screen and (max-width: 768px){
+    .nav_menu{
+        position: fixed;
+        top:0;
+        right:-100%;
+        width: 70%;
+        height: 100%;
+        padding: 3.5rem 1.5rem 0;
+        background: rgb(255,255,255, .3),;
+        backdrop-filter: blur(10px);
+        transition: .5s;
+    }
+}
+@media screen and (min-width: 768px);
+body{
+    margin: 0;
+}
+.nav{
+    height: calc(var(--header-height)+ 1.5rem);
+
+}
+.nav_toggle, .nav_close{
+    display: none;
+}
+.nav_list{
+    display: flex;
+}
+.nav_item{
+    margin-left: 3rem;
+    margin-bottom:0;
+}
+
+.home_container{
+    height: 100vh;
+    grid-template-column: repeat(2. max-content);
+    grid-template-rows: 1fr;
+    row-gap: 0;
+    align-items: center;
+    justify-content: center;
+}
+.navbar__menu ul {
+    padding-left: 0;
+    margin: 0;
+    text-align: right;
+}
+
+.navbar__menu li {
+    display: inline-block;
+}
+
+.navbar__menu .menu__link {
+    display: block;
+    padding: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+
+.navbar__menu .menu__link:hover {
+    background: #333;
+    color: #fff;
+    transition: ease 0.3s all;
+}
+.nav_close{
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.nav_item{
+    margin-bottom: 2rem;
+}
+
+.nav_close, .nav_link, .nav_logo, .nav_toggle{
+    color: var(--white-color);
+
+}
+.nav_link: hover{
+    color: var(--first-color-dark);
+}
+.nav_toggle{
+    font-size: 1.5rem;
+    cursor: pointer;
+
+}
+/* Header Styles */
+.page__header {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+/* Footer Styles */
+.page__footer {
+    background: #000;
+    padding: 4em;
+    color: #fff;
+}
+
+.page__footer p{
+    color: #fff;
+}
+
+
+/* ---- Theme Rules ---- */
+/* Landing Container Styles */
+.landing__container {
+    padding: 2em;
+    text-align: left;
+}
+
+@media only screen and (min-width: 35em){
+    .landing__container {
+        max-width: 50em;
+        padding: 4em;
+    }
+}
+
+section:nth-of-type(even) .landing__container {
+    margin-right: 0;
+    margin-left: auto;
+    text-align: right;
+}
+
+/* Background Circles */
+section:nth-of-type(odd) .landing__container::before {
+    content: '';
+    background: rgba(255, 255, 255, 0.187);
+    position: absolute;
+    z-index: -5;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+section:nth-of-type(even) .landing__container::before {
+    content: '';
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    position: absolute;
+    top: 3em;
+    right: 3em;
+    z-index: -5;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+section:nth-of-type(3n) .landing__container::after {
+    content: '';
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -5;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+section:nth-of-type(3n + 1) .landing__container::after {
+    content: '';
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    position: absolute;
+    right: 20vw;
+    bottom: -5em;
+    z-index: -5;
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+
+/* ---- Theme State Rules ---- */
+/* Section Active Styles */
+/* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
+section.your-active-class {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+section.your-active-class .landing__container::before {
+    opacity: 1;
+    animation: rotate 4s linear 0s infinite forwards;
+}
+
+section.your-active-class .landing__container::after {
+    opacity: 1;
+    animation: rotate 5s linear 0s infinite forwards reverse;
+}
+
+/* Section Active Styles Keyframe Animations */
+@keyframes rotate {
+	from {
+		transform: rotate(0deg)
+		           translate(-1em)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(-1em)
+		           rotate(-360deg);
+	}
+}
